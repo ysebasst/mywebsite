@@ -11,12 +11,12 @@ import {
 
 import iconGithub from "../../../assets/images/icon-github.svg";
 import iconLinkedin from "../../../assets/images/icon-linkedin.svg";
-import iconEnvelope from "../../../assets/images/icon-envelope.svg";
+import iconTwitter from "../../../assets/images/icon-twitter.svg";
 
 function FooterList() {
   return (
     <div>
-      <StyledFooterTitle>Contacto</StyledFooterTitle>
+      <StyledFooterTitle>Mis redes</StyledFooterTitle>
       <StyledFooterList>
         <StyledFooterItem>
           <StyledFooterLink href="https://github.com/ysebasst">
@@ -31,9 +31,9 @@ function FooterList() {
           </StyledFooterLink>
         </StyledFooterItem>
         <StyledFooterItem>
-          <StyledFooterLink href="mailto:ysebasst@gmail.com">
-            <StyledFooterIcon src={iconEnvelope} />
-            <StyledFooterText>ysebasst@gmail.com</StyledFooterText>
+          <StyledFooterLink href="https://twitter.com/ysebasst">
+            <StyledFooterIcon src={iconTwitter} />
+            <StyledFooterText>@ysebasst</StyledFooterText>
           </StyledFooterLink>
         </StyledFooterItem>
       </StyledFooterList>

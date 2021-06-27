@@ -23,7 +23,7 @@ import {
 
 import iconGithub from "../../assets/images/icon-github.svg";
 import iconLinkedin from "../../assets/images/icon-linkedin.svg";
-import iconEnvelope from "../../assets/images/icon-envelope.svg";
+import iconTwitter from "../../assets/images/icon-twitter.svg";
 
 function Home() {
   return (
@@ -52,10 +52,10 @@ function Home() {
                 <StyledInfoText>Sebastian Sierra</StyledInfoText>
               </StyledInfo>
             </LinkHTML>
-            <LinkHTML href="mailto:ysebasst@gmail.com">
+            <LinkHTML href="https://twitter.com/ysebasst">
               <StyledInfo>
-                <StyledInfoIcon src={iconEnvelope} />
-                <StyledInfoText>ysebasst@gmail.com</StyledInfoText>
+                <StyledInfoIcon src={iconTwitter} />
+                <StyledInfoText>@ysebasst</StyledInfoText>
               </StyledInfo>
             </LinkHTML>
           </Section>
