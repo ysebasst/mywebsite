@@ -37,9 +37,7 @@ export const StyledHeroWrapper = styled(Wrapper)`
     text-align: center;
   }
   @media screen and (min-width: ${breakpoints.tablet}px) {
-    display: grid;
-    gap: 2.5rem;
-    grid-template-columns: ${breakpoints.mobile - 48}px 1fr;
+    display: flex;
     align-items: center;
   }
 `;
@@ -51,7 +49,8 @@ export const StyledHeroImage = styled.img`
   max-width: 160px;
   border-radius: 50%;
   @media screen and (min-width: ${breakpoints.tablet}px) {
-    max-width: 100%;
+    flex-basis: ${breakpoints.mobile - 48}px;
+    max-width: ${breakpoints.mobile - 48}px;
   }
 `;
 export const StyledHeroInfo = styled.div`
@@ -59,8 +58,12 @@ export const StyledHeroInfo = styled.div`
   @media screen and (max-width: ${breakpoints.tablet - 1}px) {
     text-align: center;
   }
-  @media screen and (min-width: ${breakpoints.desktop}px) {
+  @media screen and (min-width: ${breakpoints.tablet}px) {
+    flex-grow: 1;
     margin-left: 2.5rem;
+  }
+  @media screen and (min-width: ${breakpoints.desktop}px) {
+    margin-left: 5rem;
   }
 `;
 export const StyledHeroName = styled.h1`

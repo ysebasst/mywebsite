@@ -9,13 +9,13 @@ export const StyledFooter = styled.footer`
 `;
 export const StyledFooterWrapper = styled(Wrapper)`
   padding: 1.5rem 0;
-  display: grid;
-  gap: 3rem;
+  display: flex;
   @media screen and (max-width: ${breakpoints.tablet - 1}px) {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   @media screen and (min-width: ${breakpoints.tablet}px) {
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
   }
 `;
 export const StyledFooterCopy = styled.p`

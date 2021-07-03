@@ -22,6 +22,9 @@ export const StyledFooterList = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  @media screen and (max-width: ${breakpoints.tablet - 1}px) {
+    margin-bottom: 3rem;
+  }
 `;
 export const StyledFooterItem = styled.li`
   list-style: none;
