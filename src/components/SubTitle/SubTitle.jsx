@@ -4,11 +4,12 @@ import styled from "styled-components";
 import { colors } from "../../config";
 
 export const StyledSubTitle = styled.h3`
-  margin: 1.25rem 0;
+  margin: ${(props) => (props.margin ? props.margin : "1.25rem")} 0;
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: ${colors.gray};
+  color: ${(props) =>
+    props.color === "secondary" ? colors.darkGray : colors.gray};
 `;
 
 function SubTitle(props) {

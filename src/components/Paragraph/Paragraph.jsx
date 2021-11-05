@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const StyledParagraph = styled.p`
-  margin: 1rem 0;
+  margin: ${(props) => (props.margin ? props.margin : "1rem")} 0;
   font-size: 1.25rem;
 `;
 

@@ -100,22 +100,20 @@ function Home() {
           </Section>
           <Section>
             <Title>Experiencia laboral</Title>
-            <Paragraph>
-              Gracias a la educación autónoma y los conocimientos adquiridos en
-              el Servicio Nacional de Aprendizaje SENA, he desarrollado un
-              portafolio (
-              <LinkHTML href="https://github.com/ysebasst">
-                github.com/ysebasst
-              </LinkHTML>
-              ) donde realizo practicas implementando diferentes lenguajes de
-              programación y diferentes metodologías en busca de mejorar la
-              escritura del código, en este se podrán encontrar proyectos
-              personales y retos facilitados por la plataforma web (
-              <LinkHTML href="https://www.frontendmentor.io/challenges">
-                frontendmentor.io
-              </LinkHTML>
-              ).
-            </Paragraph>
+            <Article>
+              <SubTitle margin=".5rem" color="secondary">
+                Farmatodo, Test Automation Engineer
+              </SubTitle>
+              <Paragraph margin="0">OCT 2021 - Actualidad</Paragraph>
+              <List>
+                <ListItem>
+                  Automatización de pruebas pagina web, apps iOS y Android.
+                </ListItem>
+                <ListItem>
+                  Realización de pruebas a entornos web, iOS y Android.
+                </ListItem>
+              </List>
+            </Article>
           </Section>
         </StyledContent>
       </StyledMainWrapper>

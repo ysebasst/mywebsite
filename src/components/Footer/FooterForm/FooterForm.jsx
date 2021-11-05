@@ -16,12 +16,14 @@ function FooterForm() {
   const [email, handleChangeEmail] = useInput("");
   const [subject, handleChangeSubject] = useInput("");
   const [message, handleChangeMessage] = useInput("");
+  const resetInput = { target: { value: "" } };
 
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setShowModal(true);
     if (name && email && subject && message) {
       const data = {
         name,
@@ -30,6 +32,11 @@ function FooterForm() {
         message,
       };
       try {
+        setModalMessage("Enviando mensaje");
+        handleChangeName(resetInput);
+        handleChangeEmail(resetInput);
+        handleChangeSubject(resetInput);
+        handleChangeMessage(resetInput);
         const res = await fetch("https://ysst-api.herokuapp.com/api/v1/email", {
           headers: {
             "Content-Type": "application/json",
@@ -38,6 +45,7 @@ function FooterForm() {
           body: JSON.stringify(data),
         });
         const resJSON = await res.json();
+        setShowModal(true);
         if (resJSON.msg === "Mensaje enviado") {
           setModalMessage("Mensaje enviado satisfactoriamente");
         } else {
@@ -45,6 +53,7 @@ function FooterForm() {
         }
       } catch (error) {
         console.log(error);
+        setShowModal(true);
         setModalMessage("Error al enviar el correo intentelo mas tarde");
       }
     } else {
@@ -52,7 +61,6 @@ function FooterForm() {
         "Introduzca todos los datos correctamente para continuar"
       );
     }
-    setShowModal(true);
   };
 
   return (
@@ -89,7 +97,7 @@ function FooterForm() {
         />
         <Button type="submit">Enviar</Button>
       </Form>
-      <Modal show={showModal}>
+      <Modal show={showModal} className={showModal ? "show" : ""}>
         <ModalButtonClose
           role="button"
           aria-label="close button"

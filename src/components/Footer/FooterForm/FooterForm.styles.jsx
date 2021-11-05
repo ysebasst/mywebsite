@@ -31,9 +31,12 @@ export const Modal = styled.div`
   width: 100%;
   height: 100vh;
   padding: 0.5rem;
-  background-color: #00000080;
-  transition: transform 0.3s;
+  background-color: #00000000;
+  transition: transform 0.3s, background-color 1.5s;
   transform: ${(props) => (props.show ? "scale(1)" : "scale(0)")};
+  &.show {
+    background-color: #00000080;
+  }
 `;
 
 // Modal Button Close
